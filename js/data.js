@@ -26,20 +26,6 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: 'scrapify',
-      name: 'Scrapify',
-      role: 'Builder & Developer',
-      category: 'AI / Computer Vision / Web App',
-      status: 'Built',
-      icon: 'RE',
-      description:
-        'A web application for scrap and waste analysis. A user uploads an image of a material, the app analyses that image, identifies the scrap, and presents the result back to the user.',
-      tech: ['Web App', 'Computer Vision', 'Image Analysis', 'AI'],
-      image: null,
-      liveUrl: 'https://scrapifyy.netlify.app/',
-      githubUrl: null     /* paste the repository URL here when ready */
-    },
-    {
       id: 'ornalens',
       name: 'Ornalens',
       role: 'Co-founder',
@@ -54,12 +40,40 @@ window.PORTFOLIO_DATA = {
       githubUrl: null
     },
     {
-      id: 'ar-furniture',
-      name: 'AR Furniture E-Commerce',
+      id: 'growplus',
+      name: 'GrowPlus',
+      role: 'Co-founder',
+      category: 'Startup / Growth Platform',
+      status: 'Live',
+      icon: 'GP',
+      description:
+        'My startup, co-founded to build an intelligent growth solutions platform that helps businesses scale through data-driven strategies, automation pipelines and AI-powered tooling.',
+      tech: ['JavaScript', 'Automation', 'Growth Engineering', 'Full-Stack'],
+      image: null,
+      liveUrl: 'https://growplus.site',
+      githubUrl: null
+    },
+    {
+      id: 'scrapify',
+      name: 'Scrapify',
       role: 'Builder & Developer',
-      category: 'AR / Mobile Commerce',
+      category: 'AI / Computer Vision / Web App',
+      status: 'Built',
+      icon: 'RE',
+      description:
+        'A web application for scrap and waste analysis. A user uploads an image of a material, the app analyses that image, identifies the scrap, and presents the result back to the user.',
+      tech: ['Web App', 'Computer Vision', 'Image Analysis', 'AI'],
+      image: null,
+      liveUrl: 'https://scrapifyy.netlify.app/',
+      githubUrl: null     /* paste the repository URL here when ready */
+    },
+    {
+      id: 'vr-furniture',
+      name: 'VR Integrated Furniture E-Commerce Platform',
+      role: 'Builder & Developer',
+      category: 'VR / AR / Mobile Commerce',
       status: 'Project',
-      icon: 'AR',
+      icon: 'VR',
       description:
         'A furniture shopping application with an augmented reality view, letting a shopper place and preview a product in their own space before buying. Covers browsing, cart, checkout and an admin side.',
       tech: ['React Native', 'Expo', 'AR', 'Firebase', 'Supabase'],
@@ -68,60 +82,18 @@ window.PORTFOLIO_DATA = {
       githubUrl: null
     },
     {
-      id: 'vr-experience',
-      name: 'VR Experience Builder',
-      role: 'Builder',
-      category: 'VR / Spatial Computing',
-      status: 'Project',
-      icon: 'VR',
+      id: 'agrihire',
+      name: 'AgriHire Chatbot',
+      role: 'Builder & Developer',
+      category: 'AI / Chatbot / AgriTech',
+      status: 'Built',
+      icon: 'AG',
       description:
-        'Immersive virtual reality environments and interactive scenes, exploring spatial computing and how interfaces behave once they leave the flat screen.',
-      tech: ['VR', 'WebGL', 'Three.js', 'Spatial UI'],
+        'A WhatsApp-based chatbot connecting farmers with agricultural workers - featuring intelligent worker matching, number masking for privacy, and automated hiring workflows. Built at a hackathon, where it won an award.',
+      tech: ['WhatsApp API', 'Node.js', 'MongoDB', 'Dialogflow'],
       image: null,
       liveUrl: null,
-      githubUrl: null
-    },
-    {
-      id: 'automation-suite',
-      name: 'Automation Suite',
-      role: 'Builder',
-      category: 'Automation / AI Agents',
-      status: 'Project',
-      icon: 'AU',
-      description:
-        'Workflow automation tooling that removes repetitive manual steps, wiring AI agents and APIs into everyday processes.',
-      tech: ['Automation', 'AI Agents', 'APIs', 'Workflows'],
-      image: null,
-      liveUrl: null,
-      githubUrl: null
-    },
-    {
-      id: 'brand-identity',
-      name: 'Brand Identity System',
-      role: 'Designer & Builder',
-      category: 'Branding / UI-UX',
-      status: 'Project',
-      icon: 'BR',
-      description:
-        'End-to-end brand and design system work for technology products - visual language, typography, motion, and the digital touchpoints built on top of them.',
-      tech: ['Branding', 'UI/UX', 'Design Systems'],
-      image: null,
-      liveUrl: null,
-      githubUrl: null
-    },
-    {
-      id: 'creative-tech-lab',
-      name: 'Creative Tech Lab',
-      role: 'Builder',
-      category: 'Creative Technology',
-      status: 'Ongoing',
-      icon: 'CT',
-      description:
-        'An ongoing set of experiments where art meets code - generative visuals, interactive pieces and AI-assisted creative tools.',
-      tech: ['Generative AI', 'Creative Code', 'WebGL'],
-      image: null,
-      liveUrl: null,
-      githubUrl: null
+      githubUrl: null     /* paste the repository URL here when ready */
     }
   ],
 
@@ -141,45 +113,5 @@ window.PORTFOLIO_DATA = {
     { name: 'Branding',          group: 'design' },
     { name: 'Startups',          group: 'startup' },
     { name: 'Experimentation',   group: 'ai' }
-  ],
-
-  /* Timeline. Years carried over from the previous version of the
-     site - edit freely, nothing here is generated. */
-  journey: [
-    {
-      year: '2019 - 2023',
-      title: 'Engineering Foundation',
-      description:
-        'Built a technical base through engineering studies - programming, computer science fundamentals, and the maths underneath modern software.',
-      active: false
-    },
-    {
-      year: '2022',
-      title: 'First Steps in AI & Automation',
-      description:
-        'Started exploring AI tools and automation, and building personal projects that combined engineering with creative problem solving.',
-      active: false
-    },
-    {
-      year: '2023',
-      title: 'Ornalens - Co-founded',
-      description:
-        'Co-founded Ornalens, an AI-powered jewellery photography product, and began working on it alongside the team.',
-      active: true
-    },
-    {
-      year: '2024',
-      title: 'Building & Iterating',
-      description:
-        'Focused on product development - building, testing and refining the product, while continuing to ship personal projects on the side.',
-      active: true
-    },
-    {
-      year: '2025 - Present',
-      title: 'Building Across AI, Web & Immersive Tech',
-      description:
-        'Working on Scrapify, AR/VR experiments and automation tooling, while continuing as a co-founder at Ornalens.',
-      active: true
-    }
   ]
 };
