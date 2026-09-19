@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="theme-color" content="#f3effb"/>
+<meta name="theme-color" content="#020408"/>
 
 <title>Raviprakash K — Builder, Technology Enthusiast &amp; Entrepreneur</title>
 <meta name="description" content="Portfolio of Raviprakash K showcasing software projects, AI applications, creative technology, automation, AR/VR projects, and startup experiences."/>
@@ -24,10 +24,10 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="assets/raviprakash.jpg"/>
 
-<!-- Typography: editorial display with a quiet, highly readable body face -->
+<!-- Fonts: Orbitron for display, Space Grotesk for reading -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <link rel="stylesheet" href="css/styles.css"/>
 
@@ -55,20 +55,36 @@
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- LOADER -->
+<div id="loader" role="status" aria-live="polite">
+  <p class="loader-name">RAVIPRAKASH K</p>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+  <p class="loader-pct" id="loader-pct">0%</p>
+</div>
+
+<!-- CUSTOM CURSOR (pointer devices only, added by js/ui.js) -->
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- 3D BACKGROUND -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
 <!-- NAVIGATION -->
 <header class="site-nav">
   <a href="#hero" class="nav-logo" aria-label="Raviprakash K — home">RK</a>
 
   <nav aria-label="Primary">
     <ul class="nav-links" id="nav-links">
-      <li><a href="#hero">Index</a></li>
+      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <a href="#contact" class="nav-cta">Start a conversation <span aria-hidden="true">↗</span></a>
+  <a href="#contact" class="nav-cta">Let&rsquo;s Connect</a>
 
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
     <span></span><span></span><span></span>
@@ -81,36 +97,40 @@
   <section id="hero" aria-labelledby="hero-heading">
     <div class="hero-grid-line" aria-hidden="true"></div>
 
-    <p class="hero-eyebrow js-fade d1">Independent builder / Karnataka, India</p>
+    <p class="hero-eyebrow js-fade d1">// Personal Portfolio</p>
 
     <h1 class="hero-name js-fade d2" id="hero-heading">
-      <span class="first">Raviprakash</span>
-      <span class="last">K.</span>
+      <span class="first">RAVIPRAKASH</span>
+      <span class="last">K</span>
     </h1>
 
     <p class="hero-tagline js-fade d3">
-      I turn ambitious ideas into useful digital products.
+      Builder<i aria-hidden="true">&bull;</i>Technology Enthusiast<i aria-hidden="true">&bull;</i>Entrepreneur
     </p>
 
     <p class="hero-desc js-fade d4">
-      Working across AI, automation, software and immersive technology — from an early
-      sketch through to something people can open, use and return to.
+      Turning ideas into interactive digital products. I build across AI, automation,
+      software, creative technology and AR/VR — and I like shipping things that people
+      can actually use.
     </p>
 
     <div class="hero-btns js-fade d5">
-      <a href="#projects" class="btn-primary">Selected work <span aria-hidden="true">↓</span></a>
-      <a href="#contact" class="btn-outline">Get in touch <span aria-hidden="true">↗</span></a>
+      <a href="#projects" class="btn-primary">Explore My Work</a>
+      <a href="#contact" class="btn-outline">Let&rsquo;s Connect</a>
     </div>
 
     <div class="hero-focus js-fade d6" aria-label="Areas of focus">
-      <span>AI systems</span>
+      <span>AI</span>
       <span>Automation</span>
-      <span>Digital products</span>
-      <span>Creative technology</span>
+      <span>Software Products</span>
+      <span>UI / UX</span>
+      <span>AR / VR</span>
+      <span>Creative Tech</span>
     </div>
 
     <div class="hero-scroll" aria-hidden="true">
-      <span>Scroll to explore</span>
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -130,8 +150,8 @@
         </div>
 
         <div class="about-content reveal">
-          <p class="section-label">01 / About</p>
-          <h2 class="section-title" id="about-heading">A builder who<br/><em>likes the work.</em></h2>
+          <p class="section-label">About Me</p>
+          <h2 class="section-title" id="about-heading">Builder at<br/><em>Heart</em></h2>
           <div class="divider" aria-hidden="true"></div>
 
           <p class="about-bio">
@@ -190,8 +210,8 @@
   <section id="projects" aria-labelledby="projects-heading">
     <div class="section-wrap">
       <div class="reveal">
-        <p class="section-label">02 / Selected work</p>
-        <h2 class="section-title" id="projects-heading">Projects shaped<br/>by <em>curiosity.</em></h2>
+        <p class="section-label">Work &amp; Experiments</p>
+        <h2 class="section-title" id="projects-heading">Selected <em>Projects</em></h2>
         <p class="section-intro">
           A mix of products, client-facing work and personal experiments across AI,
           immersive tech and automation. Live links appear on the projects that have
@@ -209,8 +229,8 @@
   <section id="skills" aria-labelledby="skills-heading">
     <div class="section-wrap">
       <div class="reveal">
-        <p class="section-label">03 / Capabilities</p>
-        <h2 class="section-title" id="skills-heading">Tools for making<br/><em>ideas tangible.</em></h2>
+        <p class="section-label">Capabilities</p>
+        <h2 class="section-title" id="skills-heading">What I <em>Work With</em></h2>
         <p class="section-intro">
           Areas I build in and keep exploring. Hover or focus any node to bring it forward.
         </p>
@@ -226,8 +246,8 @@
   <section id="contact" aria-labelledby="contact-heading">
     <div class="section-wrap">
       <div class="reveal">
-        <p class="section-label">04 / Contact</p>
-        <h2 class="section-title" id="contact-heading">Have an idea?<br/><em>Let&rsquo;s talk.</em></h2>
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title" id="contact-heading">Let&rsquo;s Build<br/><em>Together</em></h2>
         <div class="divider" aria-hidden="true"></div>
       </div>
 
@@ -344,13 +364,13 @@
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <p class="footer-logo">Raviprakash K.</p>
-      <p class="footer-tagline">Builder, technology enthusiast &amp; entrepreneur.</p>
+      <p class="footer-logo">RAVIPRAKASH K</p>
+      <p class="footer-tagline">Builder &middot; Technology Enthusiast &middot; Entrepreneur</p>
     </div>
 
     <nav aria-label="Footer">
       <ul class="footer-links">
-        <li><a href="#hero">Index</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -377,9 +397,12 @@
 
 <div id="egg-badge" role="status" aria-live="polite"></div>
 
+<!-- Three.js must resolve before scene.js; `defer` preserves order -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="js/config.js"></script>
 <script defer src="js/data.js"></script>
 <script defer src="js/render.js"></script>
+<script defer src="js/scene.js"></script>
 <script defer src="js/ui.js"></script>
 <script defer src="js/contact.js"></script>
 <script>

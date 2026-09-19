@@ -189,10 +189,21 @@
     Array.prototype.forEach.call(items, function (el) { io.observe(el); });
   }
 
-  /* ---------- POINTER ENHANCEMENT ---------- */
-  /* The visual language is intentionally quiet. Keep the hook empty
-     rather than adding 3D tilt or parallax to ordinary content cards. */
-  var TILT_TARGETS = [];
+  /* ---------- 3D CARD TILT ---------- */
+  /* Every boxed surface leans toward the pointer and lifts a little,
+     so the whole page reacts to the cursor the same way. Add a
+     selector here and it inherits the behaviour - nothing else to do.
+
+       tilt     degrees of lean at the very edge of the box
+       lift     px the box rises while hovered
+       parallax px of counter-movement for media inside it */
+  var TILT_TARGETS = [
+    { selector: '.project-card', tilt: 7, lift: 6, parallax: 10 },
+    { selector: '.info-item',    tilt: 7, lift: 5 },
+    { selector: '.contact-card', tilt: 7, lift: 5 },
+    { selector: '.tag',          tilt: 7, lift: 3 },
+    { selector: '.skill-node',   tilt: 7, lift: 3 }
+  ];
 
   function bindTilt(box, opt) {
     if (box.dataset.tiltBound) return;
